@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MakersBnB</title>
+    <!--
+        Head to https://github.com/makersacademy/web-applications-in-python/blob/main/pills/loading_css_or_static_files.md
+        If you're wondering how the CSS file below is being loaded.
+    -->
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <p>
+      Welcome to your profile <br />
+      {{user.username}}
+    </p>
+    <h1 class="header">Host</h1>
+    <div class="host_container">
+      <div class="Owned_spaces_container">
+        <h3>My properties</h3>
+        <strong>
+          {% if spaces == [] %}
+          <span>You own 0 spaces</span>
+          {% else %}
+          <ul>
+            {% for space in spaces %}
+            <li href="/spaces/{{space.id}}">{{space.name}}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+          <form action="/index/{{ user.id }}/new-listing" method="GET">
+            <button type="submit">New Listings</button>
+          </form>
+          <form action="/index/{{ user.id }}/update_space" method="GET">
+            <button type="submit">Update Space</button>
+          </form>
+        </strong>
+      </div>
+      <div class="Approve_bookings">
+        <h3>Approved Bookings</h3>
+        <ul>
+          {% if approved == [] %}
+            <span>You have 0 approved spaces</span>
+          {% else %}
+            {% for booking in approved %}
+                <li>Guest id: {{booking.guest_id}}<br>Date: {{booking.start_date}}<br>Space id: {{booking.space_id}}</li>
+            {% endfor %}
+        {% endif %}
+        </ul>
+        <ul>
+          <form action="/index/{{ user.id }}/approve_bookings" method="GET">
+            <button type="submit">Approved Bookings Details</button>
+          </form>
+        </ul>
+      </div>
+
+      <div class="Pending_bookings">
+        <h3>Pending Bookings</h3>
+        <ul>
+          {% if pending == [] %}
+          <span>You have 0 pending spaces</span>
+            {% else %}
+              {% for booking in pending %}
+                <li>Booking date: {{booking.start_date}}<br>Guest id: {{booking.guest_id}}<br>Space id: {{booking.space_id}}
+                <form action="/{{user.id}}/{{booking.id}}/approved_booking" method="POST">
+                  <button type="submit">Approve</button>
+                </form>
+                <form action="/{{user.id}}/{{booking.id}}/declined_booking" method="POST">
+                  <button type="submit">Decline</button>
+                </form>
+                </li>
+              {% endfor%}
+            {% endif %}
+        </ul>
+      </div>
+    </div>
+    <h1 class="header">Guest</h1>
+    <div class="guest_container">
+      <div class="place_booking">
+        <h3>Your details</h3>
+        <ul>
+          <li>Username: {{ user.username }}</li>
+          <li>Email: {{ user.username }}@waterbnb.com</li>
+          <li>Phone Number: 07793312343</li>
+        </ul>
+        <form action="/index/{{ user.id }}/user_details" method="GET">
+          <button type="submit">Update User Details</button>
+        </form>
+      </div>
+      <div class="pending_future_stays">
+        <h3>Place a booking</h3>
+        <form action="/index/{{ user.id }}/bookings" method="GET">
+          <button type="submit">Place a Booking</button>
+        </form>
+      </div>
+      <div class="approved_future_stays">
+        <h3>Future Stays</h3>
+        <ul>
+            {% if guest_approved == [] %}
+              <li><span>You have 0 approved future bookings</span></li>
+            {% else %}
+                {% for booking in guest_approved %}
+                    <li>Date: {{booking.start_date}}<br>Space id: {{booking.space_id}}<br>(Approved)</li>
+                {% endfor %}
+            {% endif %}
+          
+            {% if guest_pending == [] %}
+              <span>You have 0 pending future bookings</span>
+            {% else %}
+                {% for booking in guest_pending %}
+                    <li>Date: {{booking.start_date}}<br>Space id: {{booking.space_id}}<br>(Pending)</li>
+                {% endfor %}
+            {% endif %}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

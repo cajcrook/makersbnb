@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MakersBnB</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <br>
+    <form action="/index/{{ id }}/new-listing" method="POST">
+      <label for="name"><a>Name:</a></label>
+      <br />
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Listing Name"
+        required
+      /><br />
+      <br>
+
+      <label for="description"><a>Description:</a></label>
+      <br />
+      <input
+        type="text"
+        id="description"
+        name="description"
+        placeholder="short description"
+        required
+      /><br />
+      <br>
+
+      <label for="price"><a>Price per night:</a></label>
+      <br />
+      <input
+        type="number"
+        id="price"
+        name="price"
+        placeholder="Price per night"
+        required
+      /><br />
+      <br>
+
+      <label for="image"><a>Image URL:</a></label>
+      <br />
+      <input
+        type="text"
+        id="description"
+        name="description"
+        placeholder="Image URL"
+        required
+      /><br />
+      <br>
+
+      <button type="submit"><a>Create Listing</a></button>
+    </form>
+  </body>
+</html>

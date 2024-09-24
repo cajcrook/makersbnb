@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>MakersBnB</title>
+        <link rel="stylesheet" href="/static/style.css" />
+    </head>
+    <body>
+        
+        <p>This is the bookings page.</p>
+        <h3>Available Spaces</h3>
+        <ul>
+            {% for space in spaces %}
+                <li>
+                    <!-- Change the form method to POST -->
+                    <form action="/{{id}}/{{date}}/{{space.id}}/bookings/request" method="POST">
+                        <a href="/spaces/{{space.id}}">{{space.name}}, {{space.short_description}}, {{space.price_per_night}}<br></a>
+                        <button type="submit">Request property</button>
+                    </form>
+                    <br><br>
+                </li>
+            {% endfor %}
+        </ul>
+        <br><br><br>
+        <button onclick="window.history.back()" ><a>Go back</a></button>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{space.name}} | MakersBnB</title>
+        <link rel="stylesheet" href="/static/style.css" />
+    </head>
+    <body>
+        <p>Selected space details page.</p>
+        <div id="space-header">
+            <h1>{{space.name}}</h1>
+            <p>{{space.short_description}}</p>
+            <img src="{{image.image_url}}" alt="{{space.name}}">
+            <p>Price per night £{{space.price_per_night}}</p>
+            <p>Status: {{'Available' if space.availability else 'Unavailable'}}</p>
+        </div>
+
+        <div id="owner-info">
+            <h2>Owner Information</h2>
+            <p>Hosted by: {{user.username}}</p>
+        </div>
+
+
+            
+        <h3>Book the Space</h3>
+            <div class="date_dropdown_container">
+                <a>To Place a booking go to the booking page, select a date and check which property is available </a>
+            </div>
+        
+            
+        <div>
+            <h4>Quick links</h4>
+            <p>
+            <button onclick="window.history.back()"><a>Go Back</a></button>
+            <button onclick="window.location.href='/index/{{user.id}}'"><a>Back to user homepage</a></button>
+            <button onclick="window.location.href='/index'"><a>Log Out</a></button>
+            </p>
+        </div>
+            
+    </body>
+</html>

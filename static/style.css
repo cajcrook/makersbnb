@@ -1,0 +1,124 @@
+body {
+    background-image: url('/static/images/background_water.png');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+}
+
+p {
+    font-family: 'Brush Script MT', cursive; 
+    font-size: 60px; 
+    color: rgb(60, 65, 75); 
+    line-height: 1.5; 
+    margin: 20px; 
+}
+a {
+    font-family: 'Brush Script MT', cursive; 
+    font-size: 20px; 
+    color: rgb(60, 65, 75); 
+    line-height: 1.5; 
+    margin: 20px; 
+}
+
+.Owned_spaces_container, .Approve_bookings, .Pending_bookings {
+    font-family: 'Brush Script MT', cursive; 
+    font-size: 20px; 
+    color: rgb(60, 65, 75); 
+    line-height: 1.5; 
+    margin: 20px; 
+    background-color: white; 
+    display: inline-block;
+    width: 20%;
+    height: 80%;
+    padding: 10px; 
+    border: 1px solid #050404; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    vertical-align: top;
+    overflow:auto;
+    text-overflow: ellipsis;
+}
+
+.place_booking, .pending_future_stays, .approved_future_stays {
+    font-family: 'Brush Script MT', cursive; 
+    font-size: 20px; 
+    color: rgb(60, 65, 75); 
+    line-height: 1.5; 
+    margin: 20px; 
+    background-color: white; 
+    display: inline-block;
+    width: 20%;
+    height: 80%;
+    padding: 10px; 
+    border: 1px solid #050404; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    vertical-align: top;
+    overflow:auto;
+    text-overflow: ellipsis;
+}
+.sign_up_container {
+    font-family: 'Brush Script MT', cursive; 
+    font-size: 20px; 
+    color: rgb(60, 65, 75); 
+    line-height: 1.5; 
+    margin: 20px; 
+    position: absolute; 
+    top: 210px; 
+    right: 50px; 
+    background-color: white; 
+    padding: 10px; 
+    border: 1px solid #050404; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+.log_in_container{
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
+    background-color: white; 
+    padding: 10px; 
+    border: 1px solid #050404; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+
+.log_in_container input[type="text"], 
+.log_in_container input[type="password"] {
+    border: 1px solid #ccc; 
+    border-radius: 3px; 
+    padding: 5px; 
+    width: 200px; 
+    display: block; 
+    margin-bottom: 10px; 
+}
+
+.log_in_container input[type="text"], 
+.log_in_container input[type="username"] {
+    border: 1px solid #ccc; 
+    border-radius: 3px; 
+    padding: 5px; 
+    width: 200px; 
+    display: block; 
+    margin-bottom: 10px; 
+}
+
+.log_in_container input[type="text"]:focus, 
+.log_in_container input[type="username"]:focus {
+    color: rgb(60, 65, 75); 
+    font-size: 12px; 
+    font-family: 'Arial', cursive; 
+    text-decoration: underline;
+    font-weight: bold; 
+}
+.header {
+    font-family: 'Brush Script MT', cursive; 
+    border: 1px solid rgb(0, 0, 0);
+    text-align: center;
+    background-color: white; 
+
+}
+.host_container, .guest_container {
+    height: 300px;
+}

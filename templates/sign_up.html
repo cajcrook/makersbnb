@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MakersBnB</title>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <p>Welcome <br>    to WaterBnB</p>
+        <a>Please insert your details to open a new account </a>
+        <div class="new_user">
+            <form action="/index/sign_up" method="POST">
+                <label for="username"><a>Username:</a></label>
+                <input type="text" id="username" name="username" placeholder="Enter Username here" required><br>
+                
+                <label for="password"><a>Password:</a></label>
+                <input type="password" id="password" name="password" placeholder="Enter password here" required><br>
+                
+                <button type="submit"><a>Create User</a></button>
+            </form>
+        </div>
+    </body>
+</html>

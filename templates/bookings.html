@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>MakersBnB</title>
+        <link rel="stylesheet" href="/static/style.css" />
+    </head>
+    <body>
+        <p>This is the bookings page!</p>
+        <div>
+            <h1>Book a Space</h1>
+            <div class="date_dropdown_container">
+                    <form action="/index/{{ user.id }}/bookings" method="POST">
+                        <label for="date">Choose a date:</label>
+                        <input type="date" id="date" name="date">
+                        <input type="submit" value="Submit">
+                    </form>
+            </div>
+                <h3>Available Spaces</h3>
+                <ul>
+                        {% for space in spaces %}
+                            <li>
+                                <a href="/spaces/{{space.id}}">{{space.name}}, {{space.short_description}}, {{space.price_per_night}}</a>
+                            </li>
+                        {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

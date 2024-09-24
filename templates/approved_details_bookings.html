@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Approved spaces details</title>
+        <link rel="stylesheet" href="/static/style.css" />
+    </head>
+    <body>
+        <p>Approved spaces details</p>
+        <strong>
+            {% for booking in bookings %}
+              {% for space in spaces %}
+                {%if booking.space_id == space.id %}
+                  <div>
+                    <li><a>Date : {{booking.start_date}} // Status : Approved // Space Booked : {{space.name}} // Guest id : {{booking.guest_id}}</li></a>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          </strong> 
+        <div>
+            <h4></h4>
+            <p>
+              <button onclick="window.history.back()" ><a>Back to user homepage</a></button>
+              <button onclick="window.location.href='/index'"><a>Log Out</a></button>
+            </p>
+        </div>
+            
+    </body>
+</html>
