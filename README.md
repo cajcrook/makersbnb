@@ -19,6 +19,7 @@ Alongside Python we used Flask and Pytest.
 (makersbnb-venv); playwright install
 
 # Create a test and development database
+(makersbnb-venv); brew install postgresql@15
 (makersbnb-venv); createdb MAKERSBNB
 (makersbnb-venv); createdb MAKERSBNB_TEST
 
