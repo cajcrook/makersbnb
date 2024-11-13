@@ -1,12 +1,1 @@
-{
-  "tests/test_app.py::test_get_index[chromium]": true,
-  "tests/test_app.py::test_log_in_submit_succesful[chromium]": true,
-  "tests/test_app.py::test_log_in_submit_unsuccesful[chromium]": true,
-  "tests/test_app.py::test_get_homepage[chromium]": true,
-  "tests/test_app.py::test_sign_up_new_user[chromium]": true,
-  "tests/test_app.py::test_failed_sign_up[chromium]": true,
-  "tests/test_app.py::test_no_spaces_listing[chromium]": true,
-  "tests/test_app.py::test_spaces_listing[chromium]": true,
-  "tests/test_app.py::test_bookings_list_available_spaces[chromium]": true,
-  "tests/test_app.py::test_spaces_are_listed_correctly[chromium]": true
-}
+{}

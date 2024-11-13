@@ -1,0 +1,696 @@
+@@__xproc_block_delimiter__@@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4889
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 826-192-109
+127.0.0.1 - - [13/Nov/2024 14:54:15] "GET /index HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 14:54:16] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 14:54:16] "GET /static/images/background_water.png HTTP/1.1" 200 -
+/Users/chriscrook/.pyenv/versions/3.11.2/lib/python3.11/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+@@__xproc_block_delimiter__@@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4271
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 826-192-109
+127.0.0.1 - - [13/Nov/2024 14:54:17] "GET /index HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 14:54:17] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 14:54:17] "GET /static/images/background_water.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 14:54:17] "[32mPOST /index HTTP/1.1[0m" 302 -
+127.0.0.1 - - [13/Nov/2024 14:54:17] "[35m[1mGET /index/1 HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 1488, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 1466, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/app.py", line 42, in get_homepage
+    spaces_list = spaces_repository.all()
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/lib/spaces_repository.py", line 10, in all
+    cursor = self._connection.execute("SELECT * FROM spaces")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/lib/database_connection.py", line 45, in execute
+    cursor.execute(query, params)
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/psycopg/cursor.py", line 732, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.UndefinedTable: relation "spaces" does not exist
+LINE 1: SELECT * FROM spaces
+                      ^
+127.0.0.1 - - [13/Nov/2024 14:54:17] "GET /index/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 14:54:17] "GET /index/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+/Users/chriscrook/.pyenv/versions/3.11.2/lib/python3.11/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+/Users/chriscrook/.pyenv/versions/3.11.2/lib/python3.11/multiprocessing/resource_tracker.py:237: UserWarning: resource_tracker: '/mp-hu85gd39': [Errno 2] No such file or directory
+  warnings.warn('resource_tracker: %r: %s' % (name, e))
+@@__xproc_block_delimiter__@@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4552
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 826-192-109
+127.0.0.1 - - [13/Nov/2024 14:54:18] "GET /index HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 14:54:18] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 14:54:18] "GET /static/images/background_water.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 14:54:18] "[31m[1mPOST /index HTTP/1.1[0m" 401 -
+/Users/chriscrook/.pyenv/versions/3.11.2/lib/python3.11/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+@@__xproc_block_delimiter__@@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4042
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 826-192-109
+127.0.0.1 - - [13/Nov/2024 14:54:19] "[35m[1mGET /index/1 HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 1488, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 1466, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/app.py", line 44, in get_homepage
+    list_bookings = bookingrepo.all()
+                    ^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/lib/booking_repository.py", line 8, in all
+    rows = self._connection.execute("SELECT * from bookings")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/lib/database_connection.py", line 45, in execute
+    cursor.execute(query, params)
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/psycopg/cursor.py", line 732, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.UndefinedTable: relation "bookings" does not exist
+LINE 1: SELECT * from bookings
+                      ^
+127.0.0.1 - - [13/Nov/2024 14:54:19] "GET /index/1?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 14:54:19] "GET /index/1?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 14:54:19] "GET /index/1?__debugger__=yes&cmd=resource&f=console.png&s=bgBlITsiem5UoIwWPub7 HTTP/1.1" 200 -
+/Users/chriscrook/.pyenv/versions/3.11.2/lib/python3.11/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+@@__xproc_block_delimiter__@@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4569
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 826-192-109
+127.0.0.1 - - [13/Nov/2024 14:54:19] "GET /index/sign_up HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 14:54:19] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 14:54:19] "GET /static/images/background_water.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 14:54:19] "[32mPOST /index/sign_up HTTP/1.1[0m" 302 -
+127.0.0.1 - - [13/Nov/2024 14:54:19] "[35m[1mGET /index/5 HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 1488, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 1466, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/app.py", line 44, in get_homepage
+    list_bookings = bookingrepo.all()
+                    ^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/lib/booking_repository.py", line 8, in all
+    rows = self._connection.execute("SELECT * from bookings")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/lib/database_connection.py", line 45, in execute
+    cursor.execute(query, params)
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/psycopg/cursor.py", line 732, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.UndefinedTable: relation "bookings" does not exist
+LINE 1: SELECT * from bookings
+                      ^
+127.0.0.1 - - [13/Nov/2024 14:54:19] "GET /index/5?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 14:54:19] "GET /index/5?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 14:54:19] "GET /index/5?__debugger__=yes&cmd=resource&f=console.png&s=O1cXflIwXb0smM49rTki HTTP/1.1" 200 -
+/Users/chriscrook/.pyenv/versions/3.11.2/lib/python3.11/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+@@__xproc_block_delimiter__@@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4393
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 826-192-109
+127.0.0.1 - - [13/Nov/2024 14:54:20] "GET /index/sign_up HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 14:54:20] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 14:54:20] "GET /static/images/background_water.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 14:54:20] "[33mPOST /index/sign_up HTTP/1.1[0m" 404 -
+@@__xproc_block_delimiter__@@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4836
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 826-192-109
+127.0.0.1 - - [13/Nov/2024 14:54:21] "GET /index/sign_up HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 14:54:21] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 14:54:21] "GET /static/images/background_water.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 14:54:21] "[32mPOST /index/sign_up HTTP/1.1[0m" 302 -
+127.0.0.1 - - [13/Nov/2024 14:54:21] "[35m[1mGET /index/5 HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 1488, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 1466, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/app.py", line 44, in get_homepage
+    list_bookings = bookingrepo.all()
+                    ^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/lib/booking_repository.py", line 8, in all
+    rows = self._connection.execute("SELECT * from bookings")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/lib/database_connection.py", line 45, in execute
+    cursor.execute(query, params)
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/psycopg/cursor.py", line 732, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.UndefinedTable: relation "bookings" does not exist
+LINE 1: SELECT * from bookings
+                      ^
+127.0.0.1 - - [13/Nov/2024 14:54:21] "GET /index/5?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 14:54:21] "GET /index/5?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 14:54:21] "GET /index/5?__debugger__=yes&cmd=resource&f=console.png&s=bZqrqaWOTLtRgtRvfIuK HTTP/1.1" 200 -
+/Users/chriscrook/.pyenv/versions/3.11.2/lib/python3.11/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+@@__xproc_block_delimiter__@@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4889
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 826-192-109
+127.0.0.1 - - [13/Nov/2024 14:54:22] "GET /index HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 14:54:22] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 14:54:22] "GET /static/images/background_water.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 14:54:22] "[32mPOST /index HTTP/1.1[0m" 302 -
+127.0.0.1 - - [13/Nov/2024 14:54:22] "[35m[1mGET /index/2 HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 1488, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 1466, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/app.py", line 44, in get_homepage
+    list_bookings = bookingrepo.all()
+                    ^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/lib/booking_repository.py", line 8, in all
+    rows = self._connection.execute("SELECT * from bookings")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/lib/database_connection.py", line 45, in execute
+    cursor.execute(query, params)
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/psycopg/cursor.py", line 732, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.UndefinedTable: relation "bookings" does not exist
+LINE 1: SELECT * from bookings
+                      ^
+127.0.0.1 - - [13/Nov/2024 14:54:22] "GET /index/2?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 14:54:22] "GET /index/2?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 14:54:22] "GET /index/2?__debugger__=yes&cmd=resource&f=console.png&s=ihpUQacaKc6yNP6eSUQ0 HTTP/1.1" 200 -
+/Users/chriscrook/.pyenv/versions/3.11.2/lib/python3.11/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+@@__xproc_block_delimiter__@@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4850
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 826-192-109
+127.0.0.1 - - [13/Nov/2024 14:54:28] "[35m[1mGET /index/1/bookings HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 1488, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 1466, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/app.py", line 86, in get_bookings
+    booking = booking_repository.all()
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/lib/booking_repository.py", line 8, in all
+    rows = self._connection.execute("SELECT * from bookings")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/lib/database_connection.py", line 45, in execute
+    cursor.execute(query, params)
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/psycopg/cursor.py", line 732, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.UndefinedTable: relation "bookings" does not exist
+LINE 1: SELECT * from bookings
+                      ^
+127.0.0.1 - - [13/Nov/2024 14:54:28] "GET /index/1/bookings?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 14:54:28] "GET /index/1/bookings?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 14:54:28] "GET /index/1/bookings?__debugger__=yes&cmd=resource&f=console.png&s=wEzQMgq9BRD89YZ4KzVg HTTP/1.1" 200 -
+/Users/chriscrook/.pyenv/versions/3.11.2/lib/python3.11/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+@@__xproc_block_delimiter__@@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4616
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 826-192-109
+127.0.0.1 - - [13/Nov/2024 14:54:33] "[35m[1mGET /index/1/bookings HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 1488, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 1466, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/app.py", line 86, in get_bookings
+    booking = booking_repository.all()
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/lib/booking_repository.py", line 8, in all
+    rows = self._connection.execute("SELECT * from bookings")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/lib/database_connection.py", line 45, in execute
+    cursor.execute(query, params)
+  File "/Users/chriscrook/Software_Engineering/makersbnb_python_project/makersbnb-venv/lib/python3.11/site-packages/psycopg/cursor.py", line 732, in execute
+    raise ex.with_traceback(None)
+psycopg.errors.UndefinedTable: relation "bookings" does not exist
+LINE 1: SELECT * from bookings
+                      ^
+127.0.0.1 - - [13/Nov/2024 14:54:33] "GET /index/1/bookings?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 14:54:33] "GET /index/1/bookings?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 14:54:33] "GET /index/1/bookings?__debugger__=yes&cmd=resource&f=console.png&s=ndGTpNZoSzkufZSyB2JT HTTP/1.1" 200 -
+/Users/chriscrook/.pyenv/versions/3.11.2/lib/python3.11/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+@@__xproc_block_delimiter__@@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4676
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 826-192-109
+127.0.0.1 - - [13/Nov/2024 15:05:49] "GET /index HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:05:49] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:05:49] "GET /static/images/background_water.png HTTP/1.1" 200 -
+/Users/chriscrook/.pyenv/versions/3.11.2/lib/python3.11/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+@@__xproc_block_delimiter__@@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4710
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 826-192-109
+127.0.0.1 - - [13/Nov/2024 15:05:49] "GET /index HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:05:49] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:05:49] "GET /static/images/background_water.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:05:50] "[32mPOST /index HTTP/1.1[0m" 302 -
+127.0.0.1 - - [13/Nov/2024 15:05:50] "GET /index/1 HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:05:50] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+/Users/chriscrook/.pyenv/versions/3.11.2/lib/python3.11/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+@@__xproc_block_delimiter__@@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4711
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 826-192-109
+127.0.0.1 - - [13/Nov/2024 15:05:50] "GET /index HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:05:50] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:05:50] "GET /static/images/background_water.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:05:50] "[31m[1mPOST /index HTTP/1.1[0m" 401 -
+/Users/chriscrook/.pyenv/versions/3.11.2/lib/python3.11/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+@@__xproc_block_delimiter__@@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4170
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 826-192-109
+127.0.0.1 - - [13/Nov/2024 15:05:51] "GET /index/1 HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:05:51] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:05:51] "GET /static/images/background_water.png HTTP/1.1" 200 -
+/Users/chriscrook/.pyenv/versions/3.11.2/lib/python3.11/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+@@__xproc_block_delimiter__@@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4412
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 826-192-109
+127.0.0.1 - - [13/Nov/2024 15:05:51] "GET /index/sign_up HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:05:51] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:05:51] "GET /static/images/background_water.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:05:51] "[32mPOST /index/sign_up HTTP/1.1[0m" 302 -
+127.0.0.1 - - [13/Nov/2024 15:05:51] "GET /index/5 HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:05:51] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+/Users/chriscrook/.pyenv/versions/3.11.2/lib/python3.11/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+@@__xproc_block_delimiter__@@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4600
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 826-192-109
+127.0.0.1 - - [13/Nov/2024 15:05:52] "GET /index/sign_up HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:05:52] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:05:52] "GET /static/images/background_water.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:05:52] "[33mPOST /index/sign_up HTTP/1.1[0m" 404 -
+/Users/chriscrook/.pyenv/versions/3.11.2/lib/python3.11/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+@@__xproc_block_delimiter__@@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4319
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 826-192-109
+127.0.0.1 - - [13/Nov/2024 15:05:53] "GET /index/sign_up HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:05:53] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:05:53] "GET /static/images/background_water.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:05:53] "[32mPOST /index/sign_up HTTP/1.1[0m" 302 -
+127.0.0.1 - - [13/Nov/2024 15:05:53] "GET /index/5 HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:05:53] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+/Users/chriscrook/.pyenv/versions/3.11.2/lib/python3.11/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+@@__xproc_block_delimiter__@@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4549
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 826-192-109
+127.0.0.1 - - [13/Nov/2024 15:05:54] "GET /index HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:05:54] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:05:54] "GET /static/images/background_water.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:05:54] "[32mPOST /index HTTP/1.1[0m" 302 -
+127.0.0.1 - - [13/Nov/2024 15:05:54] "GET /index/2 HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:05:54] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+/Users/chriscrook/.pyenv/versions/3.11.2/lib/python3.11/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+@@__xproc_block_delimiter__@@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4435
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 826-192-109
+127.0.0.1 - - [13/Nov/2024 15:05:54] "GET /index/1/bookings HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:05:54] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:05:54] "GET /static/images/background_water.png HTTP/1.1" 200 -
+/Users/chriscrook/.pyenv/versions/3.11.2/lib/python3.11/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+@@__xproc_block_delimiter__@@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4391
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 826-192-109
+127.0.0.1 - - [13/Nov/2024 15:05:55] "GET /index/1/bookings HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:05:55] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:05:55] "GET /static/images/background_water.png HTTP/1.1" 200 -
+/Users/chriscrook/.pyenv/versions/3.11.2/lib/python3.11/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+@@__xproc_block_delimiter__@@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4829
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 826-192-109
+127.0.0.1 - - [13/Nov/2024 15:16:27] "GET /index HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:16:27] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:16:27] "GET /static/images/background_water.png HTTP/1.1" 200 -
+/Users/chriscrook/.pyenv/versions/3.11.2/lib/python3.11/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+@@__xproc_block_delimiter__@@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4637
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 826-192-109
+127.0.0.1 - - [13/Nov/2024 15:16:28] "GET /index HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:16:28] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:16:28] "GET /static/images/background_water.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:16:28] "[32mPOST /index HTTP/1.1[0m" 302 -
+127.0.0.1 - - [13/Nov/2024 15:16:28] "GET /index/1 HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:16:28] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+/Users/chriscrook/.pyenv/versions/3.11.2/lib/python3.11/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+@@__xproc_block_delimiter__@@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4253
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 826-192-109
+127.0.0.1 - - [13/Nov/2024 15:16:28] "GET /index HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:16:28] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:16:28] "GET /static/images/background_water.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:16:28] "[31m[1mPOST /index HTTP/1.1[0m" 401 -
+/Users/chriscrook/.pyenv/versions/3.11.2/lib/python3.11/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+@@__xproc_block_delimiter__@@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4945
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 826-192-109
+127.0.0.1 - - [13/Nov/2024 15:16:29] "GET /index/1 HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:16:29] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:16:29] "GET /static/images/background_water.png HTTP/1.1" 200 -
+/Users/chriscrook/.pyenv/versions/3.11.2/lib/python3.11/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+@@__xproc_block_delimiter__@@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4301
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 826-192-109
+127.0.0.1 - - [13/Nov/2024 15:16:30] "GET /index/sign_up HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:16:30] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:16:30] "GET /static/images/background_water.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:16:30] "[32mPOST /index/sign_up HTTP/1.1[0m" 302 -
+127.0.0.1 - - [13/Nov/2024 15:16:30] "GET /index/5 HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:16:30] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+/Users/chriscrook/.pyenv/versions/3.11.2/lib/python3.11/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+@@__xproc_block_delimiter__@@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4538
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 826-192-109
+127.0.0.1 - - [13/Nov/2024 15:16:30] "GET /index/sign_up HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:16:30] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:16:30] "GET /static/images/background_water.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:16:31] "[33mPOST /index/sign_up HTTP/1.1[0m" 404 -
+/Users/chriscrook/.pyenv/versions/3.11.2/lib/python3.11/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+@@__xproc_block_delimiter__@@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4841
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 826-192-109
+127.0.0.1 - - [13/Nov/2024 15:16:31] "GET /index/sign_up HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:16:31] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:16:31] "GET /static/images/background_water.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:16:31] "[32mPOST /index/sign_up HTTP/1.1[0m" 302 -
+127.0.0.1 - - [13/Nov/2024 15:16:31] "GET /index/5 HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:16:31] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+/Users/chriscrook/.pyenv/versions/3.11.2/lib/python3.11/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+@@__xproc_block_delimiter__@@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4742
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 826-192-109
+127.0.0.1 - - [13/Nov/2024 15:16:32] "GET /index HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:16:32] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:16:32] "GET /static/images/background_water.png HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:16:32] "[32mPOST /index HTTP/1.1[0m" 302 -
+127.0.0.1 - - [13/Nov/2024 15:16:32] "GET /index/2 HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:16:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+/Users/chriscrook/.pyenv/versions/3.11.2/lib/python3.11/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+@@__xproc_block_delimiter__@@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4945
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 826-192-109
+127.0.0.1 - - [13/Nov/2024 15:16:33] "GET /index/1/bookings HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:16:33] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:16:33] "GET /static/images/background_water.png HTTP/1.1" 200 -
+/Users/chriscrook/.pyenv/versions/3.11.2/lib/python3.11/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+@@__xproc_block_delimiter__@@
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4983
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 826-192-109
+127.0.0.1 - - [13/Nov/2024 15:16:33] "GET /index/1/bookings HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:16:33] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [13/Nov/2024 15:16:33] "GET /static/images/background_water.png HTTP/1.1" 200 -
+/Users/chriscrook/.pyenv/versions/3.11.2/lib/python3.11/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

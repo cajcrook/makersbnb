@@ -32,6 +32,7 @@ def post_index():
         return redirect(f'/index/{user[0].id}')
     return "Login Failed", 401
 
+
 # == User HOMEPAGE route ==
 @app.route('/index/<int:id>', methods=['GET'])
 def get_homepage(id):

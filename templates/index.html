@@ -1,41 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MakersBnB</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/static/style.css" />
   </head>
   <body>
-    <p>
-      Welcome <br />
-      to WaterBnB
-    </p>
     <div class="log_in_container">
+      <h1>Welcome to MakersBnB</h1>
       <form action="/index" method="POST">
-        <label for="username"><a>Username:</a></label>
-        <input
-          type="text"
-          id="username"
-          name="username"
-          placeholder="Enter Username here"
-          required
-        /><br />
-
-        <label for="password"><a>Password:</a></label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          placeholder="Enter password here"
-          required
-        /><br />
-
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required />
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required />
+        
         <button type="submit">Log In</button>
       </form>
-    </div>
-    <div class="sign_up_container">
-      <form action="/index/sign_up" method="GET">
-        <button type="submit"><a>Sign up</a></button>
-      </form>
+        <a href="/index/sign_up">
+          <button type="button">Sign up</button>
+        </a>
     </div>
   </body>
 </html>
