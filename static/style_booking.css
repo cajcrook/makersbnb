@@ -84,6 +84,9 @@ li {
     font-size: 1.1rem;
     font-weight: 400;
     margin-bottom: 0rem;
+    display: block; /* Make the <a> tag behave like a block-level element */
+    text-align: center; /* Center the text horizontally */
+    width: 100%; /* Ensure the <a> takes up the full width of its container */
 }
 
 
@@ -95,6 +98,10 @@ li {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
+    margin-bottom: 0rem;
+    display: block; /* Make the <a> tag behave like a block-level element */
+    text-align: center; /* Center the text horizontally */
+    width: 100%; 
 }
 
 .booking_page_containerbutton[type="submit"]:hover {
