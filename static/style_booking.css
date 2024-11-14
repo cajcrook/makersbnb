@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f0f4f8, #3d85d7);
+}
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #333;
+    margin-top: 1rem; /* Ensure there is space above the title */
+
+}
+ul {
+    list-style-type:none;
+    padding:0px;
+    margin:0px;
+}
+li {
+    list-style-type:none;
+    margin-bottom:1.5px;
+}
+
+.date_dropdown_container {
+    position: relative; 
+    margin-bottom: 1rem;
+}
+
+.booking_page_container {
+    background: hsl(0, 0%, 100%);
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    width: 90%;
+    max-height: 80vh; /* Set a max height based on viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Adjusted to start at the top */
+    position: relative; 
+    margin-top: 2rem; 
+    overflow-y: auto; /* Enable vertical scrolling */
+    }
+
+.booking_page_container li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd; 
+    border-radius: 8px;
+    background-color: #fff; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s ease-in-out;
+    font-size: 1rem; 
+}
+.booking_page_container li:hover {
+    transform: scale(1.005); 
+}
+
+.booking_page_container a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 0rem;
+}
+
+
+.booking_page_container button[type="submit"] {
+    padding: 0.8rem 1.5rem;
+    background-color: #3d85d7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.booking_page_containerbutton[type="submit"]:hover {
+    background-color: #2a6ba4;
+}
+
+.booking_page_container button {
+    background: none;
+    border: none;
+    color: #3d85d7;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.booking_page_container button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.button_container button {
+    width: 90%;
+    border: none;
+    border-radius: 8px;
+    background-color: #c91d9e;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 0.5rem; 
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }

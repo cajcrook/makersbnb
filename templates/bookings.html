@@ -2,11 +2,10 @@
 <html lang="en">
     <head>
         <title>MakersBnB</title>
-        <link rel="stylesheet" href="/static/style.css" />
+        <link rel="stylesheet" href="/static/style_booking.css" />
     </head>
     <body>
-        <p>This is the bookings page!</p>
-        <div>
+        <div class="booking_page_container">
             <h1>Book a Space</h1>
             <div class="date_dropdown_container">
                     <form action="/index/{{ user.id }}/bookings" method="POST">
@@ -15,7 +14,9 @@
                         <input type="submit" value="Submit">
                     </form>
             </div>
+        <!-- <div class="available_space_container"> -->
                 <h3>Available Spaces</h3>
+            
                 <ul>
                         {% for space in spaces %}
                             <li>
@@ -24,6 +25,6 @@
                         {% endfor %}
                 </ul>
             </div>
-        </div>
+        <!-- </div> -->
     </body>
 </html>

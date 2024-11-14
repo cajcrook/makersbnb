@@ -52,43 +52,46 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative; 
     }
 
+.sign_up_container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: #333;
+    font-style: italic;
+  }
 
-    .sign_up_container h1 {
-        font-size: 2.5rem;
-        margin-bottom: 0.5rem;
-        font-weight: 700;
-        color: #333;
-        font-style: italic;
-      }
-    
-      .sign_up_container h2 {
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
-        font-weight: 700;
-        color: #333;
-        font-style: italic;
-      }
+  .sign_up_container h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    font-style: italic;
+  }
 
 .sign_up_container button {
-    width: 100%;
-    border: none;
-    border-radius: 8px;
-    background-color: #007bff;
-    color: #fff;
-    font-size: 1.1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 0rem;
-    padding: 0.75rem 1.5rem;
-    cursor: pointer;
-    font-size: 1rem;
-    /* margin-left: 1rem; */
-  }
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background-color: #001aff;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: auto; /* Ensures it moves to the bottom of the flex container */
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  /* position: absolute; */
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: space-between; /* This ensures space for both buttons */
+  position: relative;
+}
 .sign_up_container button:hover {
-    /* text-decoration: underline; */
     color: #0056b3;
 }
 .sign_up_container input[type="text"],
@@ -133,6 +136,7 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative; 
   }
 
   .log_in_container h1 {
@@ -157,9 +161,7 @@ a {
 .log_in_container input[type="text"]:focus,
 .log_in_container input[type="password"]:focus {
     color: rgb(60, 65, 75);
-    /* font-size: 12px; */
     font-family: 'Roboto', sans-serif;
-    /* text-decoration: underline; */
     font-weight: bold;
     border-color: #007bff;
     outline: none;
@@ -169,26 +171,38 @@ a {
   width: 100%;
   border: none;
   border-radius: 8px;
-  background-color: #007bff;
+  background-color: #0dff00;
   color: #fff;
   font-size: 1.1rem;
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top: 0rem;
+  margin-top: auto; /* Ensures it moves to the bottom of the flex container */
   padding: 0.75rem 1.5rem;
-  cursor: pointer;
   font-size: 1rem;
-  /* margin-left: 1rem; */
+  /* position: absolute; */
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: space-between; /* This ensures space for both buttons */
+  position: relative;
 }
 .log_in_container button:hover {
   color: #0056b3;
 }
 
 .log_in_container form {
-    width: 100%;
-    margin-bottom: 0rem;
-  }
+  width: 100%;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* .log_in_container .sign-up-btn {
+  margin-top: 1rem;
+} */
 
   form label {
     display: block;
