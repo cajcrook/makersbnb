@@ -2,17 +2,22 @@
 <html lang="en">
     <head>
         <title>MakersBnB</title>
-        <link rel="stylesheet" href="/static/style_booking.css" />
+        <link rel="stylesheet" href="/static/style_bookings.css" />
     </head>
     <body>
-        <div class="booking_page_container">
+        <div class="wrapper">
+        <div class="title_container">
         <h2>Available Spaces</h2>
+        </div>
+        <div class="booking_page_container">
         <ul>
             {% for space in spaces %}
                 <li>
                     <form action="/{{id}}/{{date}}/{{space.id}}/bookings/request" method="POST">
-                        <a href="/spaces/{{space.id}}">{{space.name}}<br> {{space.short_description}}<br>{{space.price_per_night}} per night<br></a>
-                        <button type="submit">Request property</button>
+                        <!-- Commented out code makes whole box clickable -->
+                        <!-- <a href="/spaces/{{space.id}}">{{space.name}}<br><br>{{space.short_description}}<br>{{space.price_per_night}} p/ night</a> -->
+                        <a><b>{{space.name}}</b><br><br>{{space.short_description}}<br>{{space.price_per_night}} p/ night</a>
+                        <button type="submit">Enquire</button>
                     </form>
                     <br>
                 </li>
@@ -20,8 +25,9 @@
         </ul>
         <br>
         </div>
-        <div class="button_container">
+        <div class="back_button_container">
         <button onclick="window.history.back()" ><a>Go back</a></button>
+        </div>
         </div>
     </body>
 </html>
