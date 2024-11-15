@@ -22,15 +22,17 @@
                     <li>
                         <!-- Commented out code makes whole box clickable -->
                         <!-- <a href="/spaces/{{space.id}}">{{space.name}}<br><br>{{space.short_description}}<br>{{space.price_per_night}} p/ night</a> -->
-                        <a><b>{{space.name}}</b><br><br>{{space.short_description}}<br>{{space.price_per_night}} p/ night</a>
+                        <a><b>{{space.name}}</b><br><br>{{space.short_description}}<br>£{{space.price_per_night}} p/ night</a>
                         <button type="submit">View</button>
                     </li>
                 {% endfor %}
                 </ul>
             </div>            
-        <div class="back_button_container">
-            <button onclick="window.history.back()" ><a>Go back</a></button>
-        </div>
+            <div class="back_button_container">
+                <button onclick="window.history.back()"><a>Go Back</a></button>
+                <button onclick="window.location.href='/index/{{user.id}}'"><a>User Homepage</a></button>
+                <button onclick="window.location.href='/index'"><a>Log Out</a></button>
+            </div>
     </div>
     </body>
 </html>
