@@ -201,7 +201,7 @@ a {
     width: 90%;
     border: none;
     border-radius: 8px;
-    background-color: #c91d9e;
+    background-color: #9e1dc9;
     color: #fff;
     font-size: 1.1rem;
     font-weight: 500;
@@ -216,7 +216,6 @@ a {
     transform: translateX(-50%);
   }
 .Their_Properties button:hover {
-    /* text-decoration: underline; */
     color: #0056b3;
 }
 
