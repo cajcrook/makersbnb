@@ -10,10 +10,10 @@ from lib.image import Image
 from lib.image_repository import ImageRepository
 from datetime import datetime
 from lib.booking import Booking
-# Create a new Flask app
+
 app = Flask(__name__)
 
-# == INDEX route ==
+# ===== INDEX route =======
 @app.route('/index', methods=['GET'])
 def get_index():
     return render_template('index.html')
@@ -33,7 +33,7 @@ def post_index():
     return "Login Failed", 401
 
 
-# == User HOMEPAGE route ==
+# =======User Homepage route =======
 @app.route('/index/<int:id>', methods=['GET'])
 def get_homepage(id):
     connection = get_flask_database_connection(app)
@@ -77,7 +77,8 @@ def get_new_user():
         return redirect(f'/index/{new_user_id}')
     return 'Username already registered, Please come back and try again', 404
 
-# == BOOKING route ==
+
+# ===== Bookings & _filtered routes =====
 @app.route('/index/<id>/bookings', methods=['GET'])
 def get_bookings(id):
     connection = get_flask_database_connection(app)
@@ -105,9 +106,9 @@ def filtered_bookings_by_date_page(id,date):
     spaces = spaces_repository.all()
     spaces_available = [space for space in spaces if str(date) not in space.dates]
     return render_template('bookings_filtered.html', id = id , date = str(date) , spaces=spaces_available)
-# == Space route ==
 
 
+# ===== Spaces route =====
 @app.route('/spaces/<int:id>', methods=['GET'])
 def get_space(id):
     connection = get_flask_database_connection(app)
@@ -124,7 +125,8 @@ def get_space(id):
     user = [ user for user in user_list if user.id == space_selected[0].user_id]
     return render_template("space.html",  space = space_selected[0] ,image= image[0], user = user[0] )
 
-# new listing routes
+
+# ========== New Listing Routes ==========
 @app.route('/index/<id>/new-listing', methods = ['GET'])
 def get_new_listing_page(id):
     return render_template('new_listing.html', id=id)
