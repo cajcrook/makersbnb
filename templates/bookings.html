@@ -2,29 +2,35 @@
 <html lang="en">
     <head>
         <title>MakersBnB</title>
-        <link rel="stylesheet" href="/static/style_booking.css" />
+        <link rel="stylesheet" href="/static/style_bookings.css" />
     </head>
     <body>
-        <div class="booking_page_container">
-            <h1>Book a Space</h1>
+        <div class="wrapper">
+        <div class="title_container">
+            <h2>Book a Space</h2>
+        </div>
             <div class="date_dropdown_container">
-                    <form action="/index/{{ user.id }}/bookings" method="POST">
-                        <label for="date">Choose a date:</label>
-                        <input type="date" id="date" name="date">
-                        <input type="submit" value="Submit">
-                    </form>
-            </div>
-        <!-- <div class="available_space_container"> -->
-                <h3>Available Spaces</h3>
-            
+                <form action="/index/{{ user.id }}/bookings" method="POST">
+                    <label for="date">Choose a date:</label>
+                    <input type="date" id="date" name="date">
+                    <input type="submit" value="Submit">
+                </form>
+        </div>            
+        <div class="booking_page_container">
                 <ul>
-                        {% for space in spaces %}
-                            <li>
-                                <a href="/spaces/{{space.id}}">{{space.name}}, {{space.short_description}}, {{space.price_per_night}}</a>
-                            </li>
-                        {% endfor %}
+                {% for space in spaces %}
+                    <li>
+                        <!-- Commented out code makes whole box clickable -->
+                        <!-- <a href="/spaces/{{space.id}}">{{space.name}}<br><br>{{space.short_description}}<br>{{space.price_per_night}} p/ night</a> -->
+                        <a><b>{{space.name}}</b><br><br>{{space.short_description}}<br>{{space.price_per_night}} p/ night</a>
+                        <button type="submit">View</button>
+                    </li>
+                {% endfor %}
                 </ul>
-            </div>
-        <!-- </div> -->
+            </div>            
+        <div class="back_button_container">
+            <button onclick="window.history.back()" ><a>Go back</a></button>
+        </div>
+    </div>
     </body>
 </html>
