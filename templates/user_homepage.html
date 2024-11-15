@@ -7,17 +7,17 @@
     <link rel="stylesheet" href="/static/style_user_homepage.css" />
   </head>
   <body>
+    <div class="wrapper">
     <div class="brand_container"> 
       <h2>Brand Name</h2>
     </div> 
-    <div class="welcome_container"> 
-      <h1>Welcome to your profile</h1>
+    <div class="title_container"> 
+      <h1>Welcome</h1>
       <h2>{{ user.username }}</h2>
     </div>
     <div class="userpage_container"> 
-<!-- HOST_CONTAINER  -->
      <div class="host_container">
-      <h2 class="header">Your Properties</h2>        
+      <h2>Your Properties</h2>        
       <div class="My_Properties"> 
           <h3>Properties</h3>
           <strong>
@@ -79,16 +79,19 @@
         </div>
 <!-- GUEST_CONTAINER -->
     <div class="guest_container">      
-      <h2 class="header">Guest</h2>
+      <h2>Guest</h2>
 
       <div class="Their_Properties">
         <h3>Your Details</h3>
         <ul>
-          <li><b>Username:</b><br> {{ user.username }}</li>
-          <br>
-          <li><b>Email:</b><br>{{ user.username }}@waterbnb.com</li>
-          <br>
-          <li><b>Phone Number:</b><br> 07793312343</li>
+          <!-- <li><b>Username:</b> -->
+            <br> {{ user.username }}</li>
+          <!-- <br> -->
+          <!-- <li><b>Email:</b> -->
+            <br>{{ user.username }}@waterbnb.com</li>
+          <!-- <br> -->
+          <!-- <li><b>Phone Number:</b> -->
+            <br> 07793312343</li>
         </ul>
         <form action="/index/{{ user.id }}/user_details" method="GET">
           <button type="submit">Update</button>
@@ -104,28 +107,32 @@
         <h3>Future Stays</h3>
         <ul>
             {% if guest_approved == [] %}
-              <li><span>0 approved future bookings</span></li>
-              <br>
+              <li><span>0 approved bookings</span></li>
+              
             {% else %}
                 {% for booking in guest_approved %}
                 <br>
-                    <li>Date: {{booking.start_date}}<br>Name: {{booking.space_id}}<br>(Approved)</li>
+                    <li><b></b>Date:</b>{{booking.start_date}}<br><br>Name:</b>{{booking.space_id}}<br><b>Approved</b></li>
                 {% endfor %}
             {% endif %}
             
             {% if guest_pending == [] %}
-             <li><span>You have 0 pending future bookings</span></li>
+             <li><span>0 pending bookings</span></li>
               <br>
 
             {% else %}
                 {% for booking in guest_pending %}
                 <br>
-                    <li>Date: {{booking.start_date}}<br>Name: {{booking.space_id}}<br>(Pending)</li>
+                <li><b>Date:</b>{{booking.start_date}}
+                <br><b>Name:</b>{{booking.space_id}}
+                <br><b>Pending</b></li>
                 {% endfor %}
             {% endif %}
           </li>
         </ul>
       </div>
     </div>
-  </body>
+  </div>
+</div>
+</body>
 </html>

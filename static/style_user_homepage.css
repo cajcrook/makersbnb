@@ -1,19 +1,40 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  ul {
-    list-style-type:none;
-    padding:0px;
-    margin:0px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #f0f4f8, #3d85d7);
+}
+ul {
+  list-style-type:none;
+  padding:0px;
+  margin:0px;
+}
+li {
+  list-style-type:none;
+  margin-bottom:1.5px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh; /* Ensure the wrapper takes up the entire viewport height */
+  margin: 0 auto;
 }
 .brand_container {
     background: hsl(143, 47%, 48%);
     border-radius: 12px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     padding: 0.3rem;
-    max-width: 30%;
+    max-width: 15%;
     display:block ;
     align-items: center;
     text-align: center;
@@ -23,14 +44,7 @@
     top: 0;
     margin-top: 2rem;
   }
-  .brand_container h1 {
-    text-align: center;
-    font-size: 2rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    font-weight: 700;
-    color: #333;
-  }
+
   .brand_container h2 {
     text-align: center;
     font-size: 1.5rem;
@@ -39,108 +53,60 @@
     font-weight: 700;
     color: #333;
   }
-  .brand_container h3 {
+  .title_container {
+    /* font-family: 'Roboto', sans-serif; */
+    color: rgb(75, 71, 60);
+    line-height: 1;
+    border-radius: 12px;
+    background-color: rgb(230, 146, 101);
+    width: 100%;
+    display: block;
+    padding: 0.2rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    z-index: 1000;
+    /* height: 60px; */
+}
+
+.title_container h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: #333;
+  }
+.title_container h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: #333;
+  }
+  .title_container h3 {
     text-align: center;
     font-size: 1rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     font-weight: 500;
     color: #333;
+    font-style: italic;
   }
-
-  .welcome_container {    
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    color: rgb(60, 65, 75);
-    line-height: 1.5;
-    margin-top: 20px;
-    border-radius: 12px;
-    background-color: rgb(190, 74, 11);
-    width: 100%;
-    top: 0;
-    margin-top: 1rem;
-    display: block;
-}
-
-.welcome_container h1 {
-  text-align: center;
-  font-size: 2rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  font-weight: 700;
-  color: #333;
-}
-.welcome_container h2 {
-  text-align: center;
-  font-size: 1.5rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  font-weight: 700;
-  color: #333;
-}
-.welcome_container h3 {
-  text-align: center;
-  font-size: 1rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-  color: #333;
-}
-.welcome_container p {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-  font-weight: 700;
-  color: #333;
-  font-style: oblique;
-}
-
-  body {
-    display: block;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #f0f4f8, #3d85d7);
-}
-/* p {
-    font-family: 'Roboto', sans-serif;
-    font-style: italic;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 700;
-    color: #333;
-} */
-/* h1 {
-    font-family: 'Roboto', sans-serif;
-    font-style: italic;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: #333;
-} */
-/* a {
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    color: rgb(60, 65, 75);
-    line-height: 1.5;
-    margin: 20px;
-} */
 
 .userpage_container {
     background: hsl(143, 47%, 48%);
     border-radius: 12px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     padding: 1rem;
-    max-width: 100%;
     width: 100%;
-    display: block;
-    align-items:center;
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+    align-items: stretch;
     text-align: center;
-    /* justify-content: center; */
+    margin-bottom: 10px;
   }
-
   .userpage_container h1 {
     text-align: center;
     font-size: 2rem;
@@ -165,25 +131,39 @@
 
 .host_container {
     width: 100%;
-    height: 100%;
+    height: 40%;
     background-color: rgb(145, 186, 32);
     margin: 1rem 0;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 5px;
-
-    /* display: flex; */
-    /* display: block; */
+    flex: 1; 
+    margin-bottom: 1rem; 
   }
-
+  .host_container h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: #333;
+  }
   .guest_container {
     width: 100%;
-    height: 100%;
+    height: 40%;
     background-color: rgb(186, 165, 32);
     margin: 1rem 0;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 5px;
-    /* display: flex; */
-    /* display: block; */
+    flex: 1; 
+    margin-bottom: 1rem; 
+  }
+  .guest_container h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: #333;
   }
 
 
@@ -195,8 +175,8 @@
     margin: 5px;
     background-color: rgb(7, 185, 165);
     display: inline-block;
-    width:27%;
-    height: 300px;
+    width: 27%;
+    height: 70%;
     padding: 10px;
     border: 1px solid #050404;
     border-radius: 5px;
