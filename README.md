@@ -2,7 +2,7 @@
 ## WORK IN PROGRESS
 
 This repo contains our group project - MakersBnb. 
-It is a simple replica of a popular holiday rental website buildt using Python, Flask and Pytest.
+It is a simple replica of a popular holiday rental website build using Python, Flask and Pytest.
 
 Current functionality:
 - Add user details.
