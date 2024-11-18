@@ -2,7 +2,12 @@
 ## WORK IN PROGRESS
 
 This repo contains our group project - MakersBnb. 
-It is a simple replica of a popular holiday rental website build using Python, Flask and Pytest.
+A simple replica of a popular holiday rental website.
+
+### Structure
+Python, Flask, PostgresSQL  
+  
+[![My Skills](https://skillicons.dev/icons?i=python,flask,postgres)](https://skillicons.dev)
 
 Current functionality:
 - Add user details.
@@ -20,7 +25,7 @@ Currently scope of update:
 
 
 
-## Setup
+### Setup
 
 ```shell
 # Set up the virtual environment
