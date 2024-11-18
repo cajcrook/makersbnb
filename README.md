@@ -1,7 +1,24 @@
 # MakersBnB Python Project 
+Work in progress.
 
-This repo contains our Python project, MakersBnb.
-Alongside Python we used Flask and Pytest.
+This repo contains our group project - MakersBnb. 
+It is a simple replica of a popular holiday rental website buildt using Python, Flask and Pytest.
+
+Current functionality:
+- Add user details.
+- Add properties.
+- Search property by date.
+- Request/ Approve reservations.
+
+Currently scope of update:
+- Update CSS structure to be more uniform across pages.
+- Improve UI.
+- Improve navigation buttons across app.
+- Review password validation.
+- Automate currency selection.
+- Update booking process.
+
+
 
 ## Setup
 
