@@ -1,7 +1,7 @@
 # MakersBnB Python Project 
 ## WORK IN PROGRESS
 
-This repo contains our group project - MakersBnb. 
+This repo contains our group project - MakersBnB. 
 A simple replica of a popular holiday rental website.
 
 ### Structure
