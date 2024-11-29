@@ -16,7 +16,7 @@ CREATE TABLE users (
 );
 -- Finally, we add any records that are needed for the tests to run
 INSERT INTO users (username, password) VALUES
-('anna123', 'examplepassword'),
-('joemumford', 'examplepassword'),
-('oliviamotte', 'examplepassword'),
-('josephinerichard', 'examplepassword2');
+('user1', 'password1'),
+('user2', 'password2'),
+('user3', 'password3'),
+('user4', 'password4')

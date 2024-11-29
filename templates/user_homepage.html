@@ -30,12 +30,14 @@
               {% endfor %}
             </ul>
             {% endif %}
+            <div class="button-container">
             <form action="/index/{{ user.id }}/update_space" method="GET">
               <!-- <button type="submit">Update</button> -->
             </form>
             <form action="/index/{{ user.id }}/new-listing" method="GET">
               <button type="submit">New Listings</button>
             </form>
+            </div>
           </strong>
         </div>
         
@@ -46,14 +48,16 @@
               <span>You have 0 approved spaces</span>
             {% else %}
               {% for booking in approved %}
-                  <li>Guest id: {{booking.guest_id}}<br>Date: {{booking.start_date}}<br>Space id: {{booking.space_id}}</li>
+                  <li>Space id: {{booking.space_id}}<br>Date: {{booking.start_date}}<br>Guest id: {{booking.guest_id}}</li><br>
               {% endfor %}
           {% endif %}
           </ul>
           <ul>
+            <div class="button-container">
             <form action="/index/{{ user.id }}/approve_bookings" method="GET">
               <button type="submit">Details</button>
             </form>
+            </div>
           </ul>
         </div>
 
@@ -64,44 +68,49 @@
               <span>You have 0 pending spaces</span>
                 {% else %}
                   {% for booking in pending %}
-                    <li>Booking date: {{booking.start_date}}<br>Guest id: {{booking.guest_id}}<br>Space id: {{booking.space_id}}
-                    <form action="/{{user.id}}/{{booking.id}}/approved_booking" method="POST">
-                      <button type="submit">Accept</button>
-                    </form>
-                    <form action="/{{user.id}}/{{booking.id}}/declined_booking" method="POST">
-                      <button type="submit">Decline</button>
-                    </form>
-                    </li>
+                  <li>
+                    Booking date: {{booking.start_date}}<br>
+                    Guest id: {{booking.guest_id}}<br>
+                    Space id: {{booking.space_id}}
+                    <div class="button-container">
+                      <form action="/{{user.id}}/{{booking.id}}/approved_booking" method="POST">
+                        <button type="submit">Accept</button>
+                      </form>
+                      <form action="/{{user.id}}/{{booking.id}}/declined_booking" method="POST">
+                        <button type="submit">Decline</button>
+                      </form>
+                    </div>
+                  </li>
                   {% endfor%}
                 {% endif %}
             </ul>
           </div>
         </div>
-<!-- GUEST_CONTAINER -->
+
+
     <div class="guest_container">      
       <h2>Guesting</h2>
 
       <div class="Their_Properties">
         <h3>Your Details</h3>
         <ul>
-          <!-- <li><b>Username:</b> -->
-            <br> {{ user.username }}</li>
-          <!-- <br> -->
-          <!-- <li><b>Email:</b> -->
+            {{ user.username }}</li>
             <br>{{ user.username }}@waterbnb.com</li>
-          <!-- <br> -->
-          <!-- <li><b>Phone Number:</b> -->
             <br> 07793312343</li>
         </ul>
+        <div class="button-container">
         <form action="/index/{{ user.id }}/user_details" method="GET">
           <button type="submit">Update</button>
         </form>
+        </div>
       </div>
       <div class="Their_Properties">
         <h3>Create a booking</h3>
+        <div class="button-container">
         <form action="/index/{{ user.id }}/bookings" method="GET">
           <button type="submit">Create</button>
         </form>
+        </div>
       </div>
       <div class="Their_Properties">
         <h3>Future Stays</h3>
@@ -123,9 +132,9 @@
             {% else %}
                 {% for booking in guest_pending %}
                 <br>
-                <li><b>Date:</b>{{booking.start_date}}
-                <br><b>Name:</b>{{booking.space_id}}
-                <br><b>Pending</b></li>
+                <li><b>Date: </b>{{booking.start_date}}
+                <br><b>Name: </b>{{booking.space_id}}
+                <br><i>Pending</i></li>
                 {% endfor %}
             {% endif %}
           </li>

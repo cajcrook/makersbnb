@@ -180,14 +180,8 @@ def create_new_listing(id):
 def create_booking_request(id, date, space_id):
     connection = get_flask_database_connection(app)
     booking_repo = BookingRepository(connection)
-    
-    # Create a new booking instance
     new_booking = Booking(None, id, date, False, True, space_id)
-    
-    # Insert the new booking into the database
     booking_repo.create(new_booking)
-    
-    # Redirect to the user's homepage after creating the booking
     return redirect(f'/index/{id}')
 
 
@@ -215,7 +209,6 @@ def approved_bookings_details_list(id):
     approved_bookings_spaces_id = [booking.space_id for booking in approved_bookings]
     approved_bookings_spaces = [space for space in owner_spaces if space.id in approved_bookings_spaces_id ]
     
-    #return f'{approved_bookings_spaces} /// {approved_bookings} /// {approved_bookings_spaces_id} //'
     return render_template('approved_details_bookings.html', spaces = approved_bookings_spaces , bookings = approved_bookings)
 
 
