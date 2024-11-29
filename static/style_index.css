@@ -10,32 +10,8 @@
     height: 100vh;
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #f0f4f8, #3d85d7);
+    /* background: linear-gradient(135deg, #f0f4f8, #3d85d7); */
 }
-
-/* p, h1 {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: #333;
-}
-h2 {
-  text-align: center;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  color: #333;
-  font-style: italic;
-}
-
-a {
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    color: rgb(60, 65, 75);
-    line-height: 1.5;
-    margin: 20px;
-} */
-
 .sign_up_container {
     background: hsl(0, 0%, 100%);
     border-radius: 12px;
@@ -75,7 +51,7 @@ a {
   width: 100%;
   border: none;
   border-radius: 8px;
-  background-color: #001aff;
+  background-color: rgb(255 90 95);
   color: #fff;
   font-size: 1.1rem;
   font-weight: 500;
@@ -92,7 +68,7 @@ a {
   position: relative;
 }
 .sign_up_container button:hover {
-    color: #0056b3;
+  color: rgb(255 90 95);
 }
 .sign_up_container input[type="text"],
   .sign_up_container input[type="password"] {
@@ -112,7 +88,7 @@ a {
     font-family: 'Roboto', sans-serif;
     /* text-decoration: underline; */
     font-weight: bold;
-    border-color: #007bff;
+    color: rgb(255 90 95);
     outline: none;
 }
 
@@ -164,7 +140,7 @@ a {
     color: rgb(60, 65, 75);
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
-    border-color: #007bff;
+    border-color: rgb(255 90 95);
     outline: none;
 }
 
@@ -172,7 +148,7 @@ a {
   width: 100%;
   border: none;
   border-radius: 8px;
-  background-color: #0dff00;
+  background-color: rgb(255 90 95);
   color: #fff;
   font-size: 1.1rem;
   font-weight: 500;
@@ -189,7 +165,7 @@ a {
   position: relative;
 }
 .log_in_container button:hover {
-  color: #0056b3;
+  color: rgb(255 90 95);
 }
 
 .log_in_container form {
