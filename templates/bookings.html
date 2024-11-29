@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>MakersBnB</title>
+        <title>Spaces | MakersBnB</title>
         <link rel="stylesheet" href="/static/style_bookings.css" />
     </head>
     <body>
         <div class="wrapper">
+            <div class="brand_container"> 
+            <button_b_c onclick="window.location.href='/index/{{user.id}}'"><h2>MakersBnB</h2>
+            </button_b_c>
+          </div> 
         <div class="title_container">
             <h2>Book a Space</h2>
         </div>
             <div class="date_dropdown_container">
-                <form action="/index/{{ user.id }}/bookings" method="POST">
+                <form action="/index/{{user.id}}/bookings" method="POST">
                     <label for="date">Choose a date:</label>
                     <input type="date" id="date" name="date">
                     <input type="submit" value="Submit">
@@ -20,17 +24,22 @@
                 <ul>
                 {% for space in spaces %}
                     <li>
-                        <!-- Commented out code makes whole box clickable -->
-                        <!-- <a href="/spaces/{{space.id}}">{{space.name}}<br><br>{{space.short_description}}<br>{{space.price_per_night}} p/ night</a> -->
-                        <a><b>{{space.name}}</b><br><br>{{space.short_description}}<br>£{{space.price_per_night}} p/ night</a>
-                        <button type="submit">View</button>
+                        <a><b>{{space.name}}</b></a>
+                        <div class="space_image_container">
+                            {% if space.id in space_images %}
+                            <img src="{{ space_images[space.id][0].image_url }}" alt="{{ space.name }}">
+                {% endif %}
+                        </div>
+                        <a><br>{{space.short_description}}
+                        <br><i>£{{space.price_per_night}}</a>
+                        <button type="button" onclick="window.location.href='/spaces/{{ space.id }}'">View</button>
                     </li>
                 {% endfor %}
                 </ul>
             </div>            
             <div class="back_button_container">
-                <button onclick="window.history.back()"><a>Go Back</a></button>
-                <button onclick="window.location.href='/index/{{user.id}}'"><a>User Homepage</a></button>
+                <!-- <button onclick="window.history.back()"><a>Go Back</a></button> -->
+                <!-- <button onclick="window.location.href='/index/{{user.id}}'"><a>User Homepage</a></button> -->
                 <button onclick="window.location.href='/index'"><a>Log Out</a></button>
             </div>
     </div>

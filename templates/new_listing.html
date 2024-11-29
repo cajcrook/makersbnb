@@ -1,57 +1,85 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MakersBnB</title>
-    <link rel="stylesheet" href="/static/style.css" />
-  </head>
-  <body>
-    <br>
+    <title>New Listing | MakersBnB</title>
+      <link rel="stylesheet" href="/static/style_new_listing.css" />
+      <script>
+        // Function to show the modal popup
+        function showEnquirePopup() {
+            const modalOverlay = document.getElementById("modal-overlay");
+            modalOverlay.style.display = "block"; // Show the modal
+        }
+
+        // Function to close the modal popup
+        function closeEnquirePopup() {
+            const modalOverlay = document.getElementById("modal-overlay");
+            modalOverlay.style.display = "none"; // Hide the modal
+            window.location.href = '/index/{{ user.id }}';
+        }
+    </script>
+    </head>
+    <body>
+      <div class="wrapper">
+        <div class="brand_container"> 
+            <button_b_c onclick="window.location.href='/index/{{user.id}}'"><h2>MakersBnB</h2>
+            </button_b_c>
+          </div>           
+          
+    <div class="new_listing_container">
     <form action="/index/{{ id }}/new-listing" method="POST">
-      <label for="name"><a>Name:</a></label>
-      <br />
+      
+      <label for="name"><h3>Property Name:</h3></label>
       <input
         type="text"
         id="name"
         name="name"
-        placeholder="Listing Name"
+        placeholder="Please enter your properties name"
         required
-      /><br />
+      />
       <br>
 
-      <label for="description"><a>Description:</a></label>
-      <br />
+      <label for="description"><h3>Description:</h3></label>
       <input
         type="text"
         id="description"
         name="description"
-        placeholder="short description"
+        placeholder="Please enter a short description"
         required
-      /><br />
+      />
       <br>
 
-      <label for="price"><a>Price per night:</a></label>
-      <br />
+      <label for="price"><h3>Price:</h3></label>
       <input
         type="number"
         id="price"
         name="price"
-        placeholder="Price per night"
+        placeholder="Please enter the price"
         required
-      /><br />
+      />
       <br>
 
-      <label for="image"><a>Image URL:</a></label>
-      <br />
+      <label for="image"><h3>Image URL:</h3></label>
       <input
         type="text"
         id="description"
         name="description"
-        placeholder="Image URL"
+        placeholder="Please enter the Image URL"
         required
-      /><br />
+      />
       <br>
 
-      <button type="submit"><a>Create Listing</a></button>
-    </form>
+      <button type="submit" onclick="showEnquirePopup()"><h3>Create Listing</h3></button>
+
+      </form>
+      </div>
+    </div>
+   
+        <!-- Modal structure -->
+        <div id="modal-overlay" 
+          class="modal-overlay">
+          <div class="modal">
+              <p>Created!</p>
+              <button onclick="closeEnquirePopup()">Home</button>
+          </div>
   </body>
 </html>

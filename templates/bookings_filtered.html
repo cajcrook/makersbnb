@@ -1,33 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>MakersBnB</title>
+        <title>Availability | MakersBnB</title>
         <link rel="stylesheet" href="/static/style_bookings.css" />
+        <script>
+            // Function to show the modal popup
+            function showEnquirePopup() {
+                const modalOverlay = document.getElementById("modal-overlay");
+                modalOverlay.style.display = "block"; // Show the modal
+            }
+
+            // Function to close the modal popup
+            function closeEnquirePopup() {
+                const modalOverlay = document.getElementById("modal-overlay");
+                modalOverlay.style.display = "none"; // Hide the modal
+                window.location.href = '/index/{{ user.id }}';
+            }
+        </script>
     </head>
     <body>
         <div class="wrapper">
-        <div class="title_container">
-        <h2>Available Spaces</h2>
+            <div class="wrapper">
+                <div class="brand_container"> 
+                <button_b_c onclick="window.location.href='/index/{{user.id}}'"><h2>MakersBnB</h2>
+                </button_b_c>
+              </div> 
+            <div class="title_container">
+                <h2>Available Spaces</h2>
+                <h3>{{date}}</h3>
+            </div>
+            <div class="booking_page_container">
+                <ul>
+                    {% for space in spaces %}
+                        <li>
+                            <form action="/{{id}}/{{date}}/{{space.id}}/bookings/request" method="POST">
+                                <a><b>{{space.name}}</b></a>
+                                    <div class="space_image_container">
+                                        {% if space.id in space_images %}
+                                        <img src="{{ space_images[space.id][0].image_url }}" alt="{{ space.name }}">
+                            {% endif %}
+                                    </div>
+                                    <a><br>{{space.short_description}}
+                                    <br><i>£{{space.price_per_night}}</a>
+                                <!-- Updated button to trigger modal -->
+                                <button type="button" onclick="showEnquirePopup()">Enquire</button>
+                                <button type="button" onclick="window.location.href='/spaces/{{ space.id }}'">View</button>
+                            </form>
+                            <br>
+                        </li>
+                    {% endfor %}
+                </ul>
+                <br>
+            </div>
+            <div class="back_button_container">
+                <!-- <button onclick="window.history.back()"><a>Go Back</a></button> -->
+                <!-- <button onclick="window.location.href='/index/{{user.id}}'"><a>User Homepage</a></button> -->
+                <button onclick="window.location.href='/index'"><a>Log Out</a></button>
+            </div>
         </div>
-        <div class="booking_page_container">
-        <ul>
-            {% for space in spaces %}
-                <li>
-                    <form action="/{{id}}/{{date}}/{{space.id}}/bookings/request" method="POST">
-                        <!-- Commented out code makes whole box clickable -->
-                        <!-- <a href="/spaces/{{space.id}}">{{space.name}}<br><br>{{space.short_description}}<br>{{space.price_per_night}} p/ night</a> -->
-                        <a><b>{{space.name}}</b><br><br>{{space.short_description}}<br>£{{space.price_per_night}} p/ night</a>
-                        <button type="submit">Enquire</button>
-                    </form>
-                    <br>
-                </li>
-            {% endfor %}
-        </ul>
-        <br>
-        </div>
-        <div class="back_button_container">
-        <button onclick="window.history.back()" ><a>Go back</a></button>
-        </div>
+
+
+        <!-- Modal structure -->
+        <div id="modal-overlay" class="modal-overlay">
+            <div class="modal">
+                <p>Enquire sent</p>
+                <button onclick="closeEnquirePopup()">Home</button>
+            </div>
         </div>
     </body>
 </html>

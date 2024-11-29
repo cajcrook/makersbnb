@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UserPage | MBnB</title>
+    <title>UserPage | MakersBnB</title>
     <link rel="stylesheet" href="/static/style_user_homepage.css" />
   </head>
   <body>
     <div class="wrapper">
     <div class="brand_container"> 
-      <h2>Brand Name</h2>
+      <h2>MakersBnB</h2>
     </div> 
     <div class="title_container"> 
       <h1>Welcome</h1>
@@ -17,7 +17,7 @@
     </div>
     <div class="userpage_container"> 
      <div class="host_container">
-      <h2>Your Properties</h2>        
+      <h2>Hosting</h2>        
       <div class="My_Properties"> 
           <h3>Properties</h3>
           <strong>
@@ -30,11 +30,11 @@
               {% endfor %}
             </ul>
             {% endif %}
+            <form action="/index/{{ user.id }}/update_space" method="GET">
+              <!-- <button type="submit">Update</button> -->
+            </form>
             <form action="/index/{{ user.id }}/new-listing" method="GET">
               <button type="submit">New Listings</button>
-            </form>
-            <form action="/index/{{ user.id }}/update_space" method="GET">
-              <button type="submit">Update</button>
             </form>
           </strong>
         </div>
@@ -79,7 +79,7 @@
         </div>
 <!-- GUEST_CONTAINER -->
     <div class="guest_container">      
-      <h2>Guest</h2>
+      <h2>Guesting</h2>
 
       <div class="Their_Properties">
         <h3>Your Details</h3>
@@ -133,6 +133,11 @@
       </div>
     </div>
   </div>
+  <div class="back_button_container">
+    <!-- <button onclick="window.history.back()"><a>Go Back</a></button>
+    <button onclick="window.location.href='/index/{{user.id}}'"><a>User Homepage</a></button> -->
+    <button onclick="window.location.href='/index'"><a>Log Out</a></button>
+</div>
 </div>
 </body>
 </html>

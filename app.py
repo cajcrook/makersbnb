@@ -88,7 +88,15 @@ def get_bookings(id):
     booking = booking_repository.all()
     user_list = UserRepository(connection)
     user = user_list.find(id)
-    return render_template('bookings.html',user = user ,booking=booking, spaces=spaces)
+    image_repo = ImageRepository(connection)
+    image_list = image_repo.all()
+    space_images = {}
+    for space in spaces:
+        space_images[space.id] = [image for image in image_list if image.space_id == space.id]
+        if not space_images[space.id]:
+            space_images[space.id] = ['No image added'] 
+    return render_template('bookings.html', user=user, booking=booking, spaces=spaces, space_images=space_images)
+
 
 @app.route('/index/<id>/bookings', methods=['POST'])
 def filter_bookings_by_date(id):
@@ -100,12 +108,24 @@ def filter_bookings_by_date(id):
         return redirect(f"/index/{id}/bookings/{formatted_date}")
 
 @app.route('/index/<id>/bookings/<date>', methods=['GET'])
-def filtered_bookings_by_date_page(id,date):
+def filtered_bookings_by_date_page(id, date):
     connection = get_flask_database_connection(app)
     spaces_repository = SpacesRepository(connection)
     spaces = spaces_repository.all()
     spaces_available = [space for space in spaces if str(date) not in space.dates]
-    return render_template('bookings_filtered.html', id = id , date = str(date) , spaces=spaces_available)
+    user_list = UserRepository(connection)
+    user = user_list.find(id)
+    image_repo = ImageRepository(connection)
+    image_list = image_repo.all()
+    space_images = {}
+    for space in spaces_available:
+        # Get all images for the space
+        space_images[space.id] = [image for image in image_list if image.space_id == space.id]
+        # If no images are found for the space, set a default message
+        if not space_images[space.id]:
+            space_images[space.id] = ['No image added']
+    return render_template('bookings_filtered.html', id=id, date=str(date), spaces=spaces_available, user=user, space_images=space_images)
+
 
 
 # ===== Spaces route =====
@@ -129,7 +149,10 @@ def get_space(id):
 # ========== New Listing Routes ==========
 @app.route('/index/<id>/new-listing', methods = ['GET'])
 def get_new_listing_page(id):
-    return render_template('new_listing.html', id=id)
+    connection = get_flask_database_connection(app)
+    user_list = UserRepository(connection)
+    user = user_list.find(id)
+    return render_template('new_listing.html', id=id, user=user)
 
 @app.route('/index/<id>/new-listing', methods = ['POST'])
 def create_new_listing(id):
@@ -142,16 +165,16 @@ def create_new_listing(id):
     date = '{}'
     new_space = Spaces(None, name, description, price, date, user_id)
     spaces_repository.create(new_space)
-
     image_repository = ImageRepository(connection)
     image_url = request.form.get('image')
     spaces_list = spaces_repository.all()
     space_id = spaces_list[-1].id
     new_image = Image(None, image_url, space_id)
     image_repository.create(new_image)
-    
     print(new_space)
     return redirect(f'/index/{id}')
+
+# =============== CATEGORISED THESE ROUTES ====================
 
 @app.route('/<id>/<date>/<space_id>/bookings/request', methods=['POST'])
 def create_booking_request(id, date, space_id):
@@ -214,6 +237,8 @@ def get_worki_in_progress_page_declined_bookings(id, bookingID):
     booking_repo = BookingRepository(connection)
     booking_repo.find_and_declines(bookingID)
     return redirect(f'/index/{id}')
+
+
 
 
 # These lines start the server if you run this file directly
