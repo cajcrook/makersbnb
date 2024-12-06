@@ -187,11 +187,17 @@ def create_booking_request(id, date, space_id):
 
 @app.route('/index/<id>/update_space', methods = ['GET'])
 def update_space(id):
-    return render_template('in_development.html', id=id)
+    connection = get_flask_database_connection(app)
+    user_list = UserRepository(connection)
+    user = user_list.find(id)
+    return render_template('in_development.html', id=id, user=user)
 
 @app.route('/index/<id>/user_details', methods = ['GET'])
 def get_worki_in_progress_page_user_details(id):
-    return render_template('in_development.html', id=id)
+    connection = get_flask_database_connection(app)
+    user_list = UserRepository(connection)
+    user = user_list.find(id)
+    return render_template('in_development.html', id=id, user=user)
 
 @app.route('/index/<id>/approve_bookings', methods = ['GET'])
 def approved_bookings_details_list(id):
@@ -209,9 +215,7 @@ def approved_bookings_details_list(id):
     approved_bookings_spaces_id = [booking.space_id for booking in approved_bookings]
     approved_bookings_spaces = [space for space in owner_spaces if space.id in approved_bookings_spaces_id ]
     
-    return render_template('approved_details_bookings.html', spaces = approved_bookings_spaces , bookings = approved_bookings)
-
-
+    return render_template('approved_details_bookings.html', spaces = approved_bookings_spaces , bookings = approved_bookings, user=user)
 
 
 @app.route('/<id>/<bookingID>/approved_booking', methods=['POST'])

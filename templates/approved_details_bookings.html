@@ -1,29 +1,48 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Approved spaces details</title>
-        <link rel="stylesheet" href="/static/style.css" />
-    </head>
-    <body>
-        <p>Approved spaces details</p>
-        <strong>
+      <!DOCTYPE html>
+      <html lang="en">
+        <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>UserPage | MakersBnB</title>
+          <link rel="stylesheet" href="/static/style_approved_details_bookings.css" />
+        </head>
+        <body>
+          <div class="wrapper">
+            <div class="brand_container"> 
+              <button_b_c onclick="window.location.href='/index/{{user.id}}'"><h2>MakersBnB</h2>
+              </button_b_c>
+            </div>
+            <div class="title_container"> 
+            <h2>Approved Bookings</h2>
+          </div>
+          <div class="userpage_container"> 
+            <div class="host_container">
+             <!-- <h2>Hosting</h2>         -->
+             <div class="My_Properties"> 
+                 <h3>Your Properties</h3>
+                 <br>
+            <strong>
             {% for booking in bookings %}
               {% for space in spaces %}
                 {%if booking.space_id == space.id %}
                   <div>
-                    <li><a>Date : {{booking.start_date}} // Status : Approved // Space Booked : {{space.name}} // Guest id : {{booking.guest_id}}</li></a>
+                    <li><a>Booking Date: {{booking.start_date}}<br>Space Booked: {{space.name}}<br>Guest id : {{booking.guest_id}}</li></a><br>
                   </div>
                 {% endif %}
               {% endfor %}
             {% endfor %}
           </strong> 
+             </div>
+            </div>
         <div>
-            <h4></h4>
             <p>
-              <button onclick="window.history.back()" ><a>Back to user homepage</a></button>
               <button onclick="window.location.href='/index'"><a>Log Out</a></button>
             </p>
         </div>
-            
+      </div>
+ 
     </body>
 </html>

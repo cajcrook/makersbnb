@@ -1,16 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>MakersBnB</title>
-    <link rel="stylesheet" href="/static/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>In Development | MakersBnB</title>
+    <link rel="stylesheet" href="/static/style_in_development.css" />
   </head>
   <body>
-    <p>
-      Welcome <br />
-      to WaterBnB
-    </p>
-    <br />
-    <br />
-    <p>This page is currenty in development, Sorry :(</p>
+    <div class="wrapper">
+      <div class="brand_container"> 
+        <button_b_c onclick="window.location.href='/index/{{user.id}}'"><h2>MakersBnB</h2>
+        </button_b_c>
+      </div>
+      <div class="title_container"> 
+      <h2>This page is currenty in development, <br>Sorry :(</h2>
+    </div>
+  <div class="back_button_container">
+  <!-- <button onclick="window.history.back()"><a>Go Back</a></button> -->
+  <button onclick="window.location.href='/index'"><a>Log Out</a></button>
+</div>
+  </div>
   </body>
 </html>
