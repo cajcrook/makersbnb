@@ -16,13 +16,10 @@ Current functionality:
 - Request/ Approve reservations.
 
 Currently scope of update:
-- Update CSS structure to be more uniform across pages.
-- Improve UI.
-- Improve navigation buttons across app.
 - Review password validation.
 - Automate currency selection.
-- Update booking process.
-
+- Review booking workflow.
+- Build 'properties' page.
 
 
 ### Setup
