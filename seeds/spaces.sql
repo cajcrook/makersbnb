@@ -20,11 +20,11 @@ CREATE TABLE spaces (
 
 
 -- Finally, we add any records that are needed for the tests to run
-INSERT INTO spaces (name, short_description, price_per_night, dates, user_id) VALUES ('Ocean Oasis', 'Small apartment in a big ocean',534, '{"25-12-2024"}', 1);
-INSERT INTO spaces (name, short_description, price_per_night, dates, user_id) VALUES ('River Retreat', 'The retreat on the river',71, '{"14-09-2024","01-01-2025"}', 2);
-INSERT INTO spaces (name, short_description, price_per_night, dates, user_id) VALUES ('Sea Shed', 'Not much more than a shed by the sea',33, '{"31-07-2025"}', 3);
+INSERT INTO spaces (name, short_description, price_per_night, dates, user_id) VALUES ('Ocean Oasis', 'Small apartment in a big ocean',534, '{"01-01-2025"}', 1);
+INSERT INTO spaces (name, short_description, price_per_night, dates, user_id) VALUES ('River Retreat', 'The retreat on the river',71, '{"22-06-2025"}', 2);
+INSERT INTO spaces (name, short_description, price_per_night, dates, user_id) VALUES ('Sea Shed', 'Not much more than a shed by the sea',33, '{"31-07-2025", "13-09-2025"}', 3);
 INSERT INTO spaces (name, short_description, price_per_night, dates, user_id) VALUES ('Igloo', 'A cool place to chill out',101, '{}', 4);
-INSERT INTO spaces (name, short_description, price_per_night, dates, user_id) VALUES ('Waterfall Windows', 'Do not sleep too close to the edge',1045, '{"13-09-2025"}', 1);
+INSERT INTO spaces (name, short_description, price_per_night, dates, user_id) VALUES ('Waterfall Windows', 'Do not sleep too close to the edge',1045, '{"25-12-2025"}', 1);
 
 
 

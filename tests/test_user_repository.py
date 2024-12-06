@@ -10,10 +10,10 @@ def test_all(db_connection):
     db_connection.seed("seeds/users.sql")
     repository = UserRepository(db_connection)
     assert repository.all() == [
-    User(1, 'anna123', 'examplepassword'),
-    User(2, 'joemumford', 'examplepassword'),
-    User(3, 'oliviamotte', 'examplepassword'),
-    User(4, 'josephinerichard', 'examplepassword2')
+    User(1, 'user1', 'password1'),
+    User(2, 'user2', 'password2'),
+    User(3, 'user3', 'password3'),
+    User(4, 'user4', 'password4')
     ]    
                                   
 """
@@ -27,10 +27,10 @@ def test_create(db_connection):
     user = User(None, "test_username", "test_password")
     repository.create(user)  
     assert repository.all() == [
-    User(1, 'anna123', 'examplepassword'),
-    User(2, 'joemumford', 'examplepassword'),
-    User(3, 'oliviamotte', 'examplepassword'),
-    User(4, 'josephinerichard', 'examplepassword2'),
+    User(1, 'user1', 'password1'),
+    User(2, 'user2', 'password2'),
+    User(3, 'user3', 'password3'),
+    User(4, 'user4', 'password4'),
     User(5, 'test_username', 'test_password')
     ]    
 
@@ -43,7 +43,7 @@ def test_find(db_connection):
     db_connection.seed("seeds/users.sql")
     repository = UserRepository(db_connection)
     user = repository.find(2)
-    assert user == User(2, 'joemumford', 'examplepassword')
+    assert user == User(2, 'user2', 'password2')
 
 
 

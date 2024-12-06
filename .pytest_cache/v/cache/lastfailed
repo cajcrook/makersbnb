@@ -1,1 +1,4 @@
-{}
+{
+  "tests/test_app.py::test_no_spaces_listing[chromium]": true,
+  "tests/test_app.py::test_new_user_signs_up[chromium]": true
+}
