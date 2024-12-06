@@ -5,6 +5,7 @@
   "tests/test_app.py::test_get_index[chromium]",
   "tests/test_app.py::test_log_in_submit_succesful[chromium]",
   "tests/test_app.py::test_log_in_submit_unsuccesful[chromium]",
+  "tests/test_app.py::test_new_user_signs_up[chromium]",
   "tests/test_app.py::test_no_spaces_listing[chromium]",
   "tests/test_app.py::test_sign_up_new_user[chromium]",
   "tests/test_app.py::test_spaces_are_listed_correctly[chromium]",
