@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MakersBnB</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/style_index.css" />
+</head>
+  <body>
+    <div class="sign_up_container">
+        <h2>Username already exists<br>please try again</h2>
+        <br>
+        <form action="/index/sign_up" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required />
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required />
+
+            <button type="submit">Create Account</button>
+        </form>
+    </div>
+  </body>
+</html>

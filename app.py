@@ -75,7 +75,8 @@ def get_new_user():
         users = user_repository.all()
         new_user_id = users[-1].id
         return redirect(f'/index/{new_user_id}')
-    return 'Username already registered, Please come back and try again', 404
+    # return 'Username already registered, Please come back and try again', 404
+    return render_template('user_exists.html')
 
 
 # ===== Bookings & _filtered routes =====
@@ -143,18 +144,18 @@ def get_space(id):
     if image == []:
         image = ['No image added']
     user = [ user for user in user_list if user.id == space_selected[0].user_id]
-    return render_template("space.html",  space = space_selected[0] ,image= image[0], user = user[0] )
+    return render_template("spaces.html",  space = space_selected[0] ,image= image[0], user = user[0] )
 
 
 # ========== New Listing Routes ==========
-@app.route('/index/<id>/new-listing', methods = ['GET'])
+@app.route('/index/<id>/new_listing', methods = ['GET'])
 def get_new_listing_page(id):
     connection = get_flask_database_connection(app)
     user_list = UserRepository(connection)
     user = user_list.find(id)
     return render_template('new_listing.html', id=id, user=user)
 
-@app.route('/index/<id>/new-listing', methods = ['POST'])
+@app.route('/index/<id>/new_listing', methods = ['POST'])
 def create_new_listing(id):
     connection = get_flask_database_connection(app)
     spaces_repository = SpacesRepository(connection)

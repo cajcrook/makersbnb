@@ -13,5 +13,5 @@ INSERT INTO images ( image_url , space_id) VALUES ( 'https://i.pinimg.com/origin
 INSERT INTO images ( image_url , space_id) VALUES ( 'https://mybestplace.com/uploads/2021/07/Drina-River-House-Serbia-COVER.jpg',2);
 INSERT INTO images ( image_url , space_id) VALUES ( 'https://vwartclub.com/media/projects/6572/1.jpg',3);
 INSERT INTO images ( image_url , space_id) VALUES ( 'https://wodnesprawy.pl/wp-content/uploads/2023/12/Wodne-Sprawy_27_2023-7.jpg',4);
-INSERT INTO images ( image_url , space_id) VALUES ( 'https://mybestplace.com/uploads/2021/07/Drina-River-House-Serbia-COVER.jpg',5);
+INSERT INTO images ( image_url , space_id) VALUES ( 'https://thermohouse.co.uk/wp-content/uploads/2019/04/hero-image.jpg',5);
 
